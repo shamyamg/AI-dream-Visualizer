@@ -1,0 +1,25 @@
+import { Router } from "express";
+import { GenerateDreamImageBody } from "@workspace/api-zod";
+import { generateImageBuffer } from "@workspace/integrations-openai-ai-server/image";
+
+const router = Router();
+
+router.post("/dream/generate", async (req, res) => {
+  const parseResult = GenerateDreamImageBody.safeParse(req.body);
+  if (!parseResult.success) {
+    res.status(400).json({ error: "prompt is required" });
+    return;
+  }
+
+  const { prompt } = parseResult.data;
+  try {
+    const enhanced = `Dreamlike, surreal, highly detailed, painterly digital art: ${prompt}. Ethereal lighting, vivid colors.`;
+    const buffer = await generateImageBuffer(enhanced, "1024x1024");
+    res.json({ imageUrl: `data:image/png;base64,${buffer.toString("base64")}`, prompt });
+  } catch (err) {
+    req.log.error({ err }, "Failed to generate dream image");
+    res.status(500).json({ error: "Failed to generate image. Please try again." });
+  }
+});
+
+export default router;
