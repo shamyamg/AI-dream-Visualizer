@@ -2,6 +2,11 @@
 
 An AI-powered web studio that translates subconscious dreams, night visions, and surreal thoughts into high-definition digital art, complete with Jungian psychological interpretation and an ethereal ambient theta soundscape.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Website-ai--dream--visualise.onrender.com-6366f1?style=for-the-badge&logo=render&logoColor=white)](https://ai-dream-visualise.onrender.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-dream-visualizer.vercel.app/)
+
+👉 **Live App**: [https://ai-dream-visualise.onrender.com/](https://ai-dream-visualise.onrender.com/)
+
 ![AI Dream Visualizer](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop)
 
 ---
@@ -31,13 +36,13 @@ An AI-powered web studio that translates subconscious dreams, night visions, and
 2. Vercel automatically detects the Vite framework and settings from `vercel.json`.
 3. Click **Deploy**.
 
-### Deploy on Render
-1. Go to [Render Dashboard](https://dashboard.render.com/) -> **New** -> **Static Site**.
+### Deploy on Render (Web Service)
+1. Go to [Render Dashboard](https://dashboard.render.com/) -> **New** -> **Web Service**.
 2. Connect this repository (`shamyamg/AI-dream-Visualizer`).
 3. Set:
    - **Build Command**: `npm install && npm run build`
-   - **Publish Directory**: `dist`
-4. Click **Create Static Site**.
+   - **Start Command**: `node server.js`
+4. Click **Create Web Service**.
 
 ---
 
@@ -53,8 +58,8 @@ npm run dev
 # Build production bundle
 npm run build
 
-# Preview production build
-npm run preview
+# Start production server
+npm start
 ```
 
 ---
@@ -71,6 +76,7 @@ npm run preview
 │   ├── App.tsx            # Main app shell & navigation
 │   ├── index.css          # Tailwind CSS styles & variables
 │   └── main.tsx           # Application entrypoint
+├── server.js              # Production Express Node.js web server
 ├── index.html             # HTML template
 ├── package.json           # Dependencies and scripts
 ├── render.yaml            # Render deployment blueprint
