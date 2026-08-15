@@ -6,7 +6,8 @@ An AI-powered web studio that translates subconscious dreams, night visions, and
 [![Live Demo](https://img.shields.io/badge/Live%20Website-ai--dream--visualise.onrender.com-6366f1?style=for-the-badge&logo=render&logoColor=white)](https://ai-dream-visualise.onrender.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-dream-visualizer.vercel.app/)
 
-👉 **Live App**: [https://ai-dream-visualise.onrender.com/](https://ai-dream-visualise.onrender.com/)
+👉 **Live App**: 
+🌐 https://ai-dream-visualizer.vercel.app
 
 ![AI Dream Visualizer](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop)
 
